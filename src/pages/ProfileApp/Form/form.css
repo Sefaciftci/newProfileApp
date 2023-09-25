@@ -1,0 +1,22 @@
+.formContainer{
+    display: flex;
+    align-items: center;
+}
+
+.formContainer input{
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    margin-right: 2px;
+}  
+.formContainer input:focus{
+    outline-style: none;
+}
+.formContainer button{
+    border: none;
+}
+.addIcon{
+    color: rgb(1, 90, 1);
+    border-radius: 10px;
+}

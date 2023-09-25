@@ -1,0 +1,23 @@
+.mainDiv{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.mainDiv h1 {
+    color: #fff;
+    margin-top: 100px;
+    letter-spacing: 1.2px;
+    font-size: 38px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 50px 100px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

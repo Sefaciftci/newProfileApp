@@ -1,0 +1,32 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+.homeTitle{
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    color: white;
+    margin-bottom: 100px;
+}
+.btnBox {
+    position: fixed;
+    bottom: 150px;
+}
+.btnBox button{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.btnBox button:hover{
+    background-color:rgb(38, 97, 40);
+    color: white;
+}
