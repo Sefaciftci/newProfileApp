@@ -21,7 +21,7 @@ const ProfileMainApp = () => {
       </div>
       <div className='btnBox'>
           <button className='navigateBtn' onClick={()=>navigate('/')} ><BsChevronLeft/></button>
-          <button  className='navigateBtn'><BsChevronRight/></button>
+          <button  className='navigateBtn' onClick={()=>navigate('/imgSearch')} ><BsChevronRight/></button>
       </div>
     </div>
   )
