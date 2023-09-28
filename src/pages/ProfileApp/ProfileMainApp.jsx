@@ -19,7 +19,7 @@ const ProfileMainApp = () => {
       <Form addProfile={addProfile}/>
       <ProfileList profiles={profiles} setProfiles={setProfiles}/>
       </div>
-      <div className='btnBox'>
+      <div className='btnBox profifBtnBox'>
           <button className='navigateBtn' onClick={()=>navigate('/')} ><BsChevronLeft/></button>
           <button  className='navigateBtn' onClick={()=>navigate('/imgSearch')} ><BsChevronRight/></button>
       </div>
