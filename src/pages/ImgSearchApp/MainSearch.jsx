@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import ImgSearchBar from './Components/ImgSearchBar';
 import axios from 'axios';
 import ImgList from './Components/ImgList';
+import './imgSearchApp.css';
 
 const MainSearch = () => {
   const [data,setData] = useState([]);
@@ -12,8 +13,12 @@ const MainSearch = () => {
     setData(response.data.results);
   }
 
+  useEffect(()=> {
+    getImageSearch()
+  },[])
+  
   return (
-    <div>
+    <div className='imgSearchMainDiv'>
       <ImgSearchBar searchValue={getImageSearch}/>
       <ImgList data={data}/>
     </div>
