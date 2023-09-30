@@ -27,7 +27,7 @@ const MainSearch = () => {
       <ImgList data={data}/>
       <div className='btnBox searchBtnBox'>
           <button className='navigateBtn' onClick={()=>navigate('/newProfile')}><BsChevronLeft/></button>
-          <button  className='navigateBtn' onClick={()=>navigate('/')}><BsChevronRight/></button>
+          <button  className='navigateBtn' onClick={()=>navigate('/MainTask')}><BsChevronRight/></button>
       </div>
     </div>
   )
