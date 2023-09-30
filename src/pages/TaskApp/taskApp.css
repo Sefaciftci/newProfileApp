@@ -1,5 +1,10 @@
 .mainTask{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .mainTaskTitle{
     font-size: 40px;
@@ -35,4 +40,63 @@
     background-color: lightgray;
     color: #fff;
     font-weight: 700;
+    transition: 0.7s;
+}
+.createTaskBox button:hover{
+    opacity: 0.7;
+}
+
+/*TaskList TaskItem*/
+.taskListBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.taskItemBox{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px;
+    width: 250px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+.taskItemContent{
+    margin: 10px;
+}
+.taskItemContent p{
+    margin-top:5px;
+}
+.taskItemBtnBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.taskItemBtnBox button{
+    padding: 8px 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    border:none;
+    transition: 0.6s;
+}
+.taskItemBtnBox button:hover{
+    opacity: 0.7;
+}
+.taskItemBtnBox .deleteBtn{
+    background-color: red;
+    color: white;
+}
+.taskItemBtnBox .addjustBtn{
+    background-color:rgb(49,153,223);
+    color: #fff;
+}
+.taskBtnBox{
+    margin: 100px 0px;
 }

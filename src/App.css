@@ -22,10 +22,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(133,57,176,1) 21%, rg
     box-shadow: inset 0 0 5px grey; 
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(48,157,227); 
+    background: lightgray; 
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(17, 105, 160);
+    background: gray;
   }
 
 .mainDiv{
