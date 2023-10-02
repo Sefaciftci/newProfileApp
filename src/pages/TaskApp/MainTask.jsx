@@ -19,14 +19,33 @@ const MainTask = () => {
         }]
         setTask(createTasks);
     }
+
+    //delete task 
+    const deleteTask = (id) => {
+      const deletedTask = task.filter((item)=>{
+        return item.id !== id;
+      })
+      setTask(deletedTask);
+    }
+
+    //updated Task
+    const onUpdated = (id , editTitle , editContent) => {
+      const editedTask = task.map((task) => {
+        if(task.id === id ){
+          return {id, title : editTitle , content : editContent}
+        }
+        return task; 
+        })
+        setTask(editedTask);
+    }
     
   return (
     <div className='mainTask'>
       <h1 className='mainTaskTitle'>Create Your Task</h1>
       <CreateTask createTask ={createTask}/>
-      <TaskList task={task}/>
+      <TaskList task={task} deleteTask= {deleteTask} onUpdated={onUpdated}/>
       <div className='btnBox taskBtnBox'>
-          <button className='navigateBtn' onClick={()=>navigate('/imgSearch')}><BsChevronLeft/></button>
+          <button className='navigateBtn' onClick={()=>navigate('/imgSearch')}><BsChevronLeft fontWeight=''/></button>
           <button  className='navigateBtn' onClick={()=>navigate('/')}><BsChevronRight/></button>
       </div>
     </div>
