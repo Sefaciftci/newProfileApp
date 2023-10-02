@@ -1,27 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import CreateTask from './Components/CreateTask'
 import TaskList from './Components/TaskList'
 import {useNavigate} from "react-router-dom"
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
+import axios from 'axios';
 
 const MainTask = () => {
     const navigate = useNavigate();
     const [task,setTask] = useState([]);
-    const createTask = (title,content) => {
+    const createTask = async (title,content) => {
+
+      //db post işlemi axios ile 
+       const response = await axios.post('http://localhost:3004/tasks',{
+          title,
+          content
+        })
+
         //spread ile onceki tasklarıaldık ve yenisinide oluşturduk
-        const createTasks = [
-            ...task, 
-            {
-            id:Math.random(),
-            title,
-            content
-        }]
+        const createTasks = [...task, response.data] //repsonse icindeki degerler
         setTask(createTasks);
+    }  
+    //yenileme durumunda get useEffect ile datamızı axios get ile cagırma
+    const dataFetch = async() => {
+      const response = await axios.get('http://localhost:3004/tasks');
+      setTask(response.data);
     }
+    useEffect(()=> {
+      dataFetch();
+    },[])
 
     //delete task 
-    const deleteTask = (id) => {
+    const deleteTask = async (id) => {
+      //db de silinmesi için axios.delete isteği atarız id mizi kullanarak
+      await axios.delete(`http://localhost:3004/tasks/${id}`);
       const deletedTask = task.filter((item)=>{
         return item.id !== id;
       })
@@ -29,7 +41,12 @@ const MainTask = () => {
     }
 
     //updated Task
-    const onUpdated = (id , editTitle , editContent) => {
+    const onUpdated = async (id , editTitle , editContent) => {
+      // put request ile db deki datamızı güncelleme
+      await axios.put(`http://localhost:3004/tasks/${id}`,{
+        title:editTitle,
+        content:editContent
+      });
       const editedTask = task.map((task) => {
         if(task.id === id ){
           return {id, title : editTitle , content : editContent}

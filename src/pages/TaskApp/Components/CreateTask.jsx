@@ -31,7 +31,7 @@ const CreateTask = ({createTask,taskItem,taskShow ,onUpdate}) => {
 
         <textarea
         rows="5"
-        placeholder='change your misson'
+        placeholder='change your task'
         value={content}
         onChange={((e)=>setContent(e.target.value))}
         />
@@ -49,7 +49,7 @@ const CreateTask = ({createTask,taskItem,taskShow ,onUpdate}) => {
 
         <textarea
         rows="5"
-        placeholder='add your misson'
+        placeholder='add your task'
         value={content}
         onChange={((e)=>setContent(e.target.value))}
         />

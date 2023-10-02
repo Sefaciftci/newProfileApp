@@ -26,15 +26,15 @@ const TaskItem = ({taskItem, deleteTask ,onUpdated }) => {
      ? <CreateTask taskItem={taskItem} taskShow={taskShow} onUpdate={handleUpdate} /> : 
      <div className='taskItemBox'>
          <div className='taskItemContent'>
-         <h3>Task Title</h3>
+         <h3>Title</h3>
          <p>{taskItem.title}</p>
          </div>
          <div className='taskItemContent'>
-         <h3>Task Content</h3>
+         <h3>Task</h3>
          <p>{taskItem.content}</p>
          </div>
          <div className='taskItemBtnBox'>
-           <button className='addjustBtn' onClick={handleEdit}>Adjusting</button>
+           <button className='addjustBtn' onClick={handleEdit}>Edit</button>
            <button className='deleteBtn' onClick={handleDelete} >Delete</button>
          </div>
          

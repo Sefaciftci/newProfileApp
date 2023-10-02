@@ -23,7 +23,7 @@
     border:1px solid #888787;
     transition: 0.5s;
     background-color:rgb(211, 210, 210);
-    color: #888787;
+    color: #fff;
 }
 
 .btnBox button:hover{
