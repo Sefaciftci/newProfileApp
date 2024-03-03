@@ -63,7 +63,7 @@ const MainTask = () => {
       <TaskList task={task} deleteTask= {deleteTask} onUpdated={onUpdated}/>
       <div className='btnBox taskBtnBox'>
           <button className='navigateBtn' onClick={()=>navigate('/imgSearch')}><BsChevronLeft fontWeight=''/></button>
-          <button  className='navigateBtn' onClick={()=>navigate('/')}><BsChevronRight/></button>
+          <button  className='navigateBtn' onClick={()=>navigate('/weather')}><BsChevronRight/></button>
       </div>
     </div>
   )
